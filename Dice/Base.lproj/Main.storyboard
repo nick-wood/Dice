@@ -17,32 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0F-es-a27">
-                                <rect key="frame" x="0.0" y="64" width="600" height="162"/>
-                            </pickerView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IwI-fJ-GHA">
-                                <rect key="frame" x="16" y="299" width="568" height="281"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2h-D7-dJR">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2h-D7-dJR">
                                 <rect key="frame" x="0.0" y="234" width="600" height="57"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="PRESS ME">
+                                <state key="normal" title="Roll">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="vh0-4m-wFE"/>
+                                    <action selector="rollButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="KmV-Wt-oSp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="i2h-D7-dJR" firstAttribute="top" secondItem="L0F-es-a27" secondAttribute="bottom" constant="8" id="F7P-Xe-fU0"/>
-                            <constraint firstAttribute="centerX" secondItem="L0F-es-a27" secondAttribute="centerX" id="Jgr-Ub-pae"/>
                             <constraint firstAttribute="centerX" secondItem="i2h-D7-dJR" secondAttribute="centerX" id="OVA-F3-xX0"/>
                             <constraint firstItem="i2h-D7-dJR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="f6R-e6-Bd2"/>
-                            <constraint firstItem="L0F-es-a27" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fsT-0d-nf7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i2h-D7-dJR" secondAttribute="trailing" constant="-16" id="xfT-yw-xb9"/>
                         </constraints>
                     </view>
