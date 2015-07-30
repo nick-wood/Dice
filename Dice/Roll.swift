@@ -11,31 +11,24 @@ import Foundation
 class Roll {
   
   let numberOfDice: Int
-  let dieSides: Int
-  
+  let dieSides: UInt32
   var individualScores = [Int]()
   var totalRoll: Int = 0
   
-  init(numberOfDice: Int, dieSides: Int) {
-    
+  init(numberOfDice: Int, dieSides: UInt32) {
     self.numberOfDice = numberOfDice
     self.dieSides = dieSides
   }
   
   func rollDice(numberOfDice: Int, dieSides: UInt32) {
-    
     var count = 1
     
     do {
-      
       var result = Int(arc4random_uniform(dieSides))
       
       individualScores.append(result)
       totalRoll += result
       count++
-      
     } while (count <= numberOfDice);
   }
-
-  
 }

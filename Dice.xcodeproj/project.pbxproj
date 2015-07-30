@@ -79,10 +79,10 @@
 		E74C0ADB1B5F52E5001CAD1B /* Dice */ = {
 			isa = PBXGroup;
 			children = (
+				E74C0AE21B5F52E5001CAD1B /* Main.storyboard */,
 				E74C0ADE1B5F52E5001CAD1B /* AppDelegate.swift */,
 				E74C0AE01B5F52E5001CAD1B /* MainViewController.swift */,
-				E74C0AFE1B5F5316001CAD1B /* Roll.swift */,
-				E74C0AE21B5F52E5001CAD1B /* Main.storyboard */,
+				E7D3379A1B698E180082EC0E /* Model */,
 				E74C0AE51B5F52E5001CAD1B /* Images.xcassets */,
 				E74C0AE71B5F52E5001CAD1B /* LaunchScreen.xib */,
 				E74C0ADC1B5F52E5001CAD1B /* Supporting Files */,
@@ -113,6 +113,14 @@
 				E74C0AF31B5F52E5001CAD1B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7D3379A1B698E180082EC0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E74C0AFE1B5F5316001CAD1B /* Roll.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +423,7 @@
 				E74C0AFA1B5F52E5001CAD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E74C0AFB1B5F52E5001CAD1B /* Build configuration list for PBXNativeTarget "DiceTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +432,7 @@
 				E74C0AFD1B5F52E5001CAD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

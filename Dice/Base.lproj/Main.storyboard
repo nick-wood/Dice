@@ -1,64 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PMy-1i-MFI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7x0-Tx-w7Z">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Dice-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="eRs-hx-BkA">
             <objects>
-                <viewController title="Dice" id="BYZ-38-t0r" customClass="MainViewController" customModule="Dice" sceneMemberID="viewController">
+                <viewController title="Dice" id="Dkn-yZ-vJB" customClass="MainViewController" customModule="Dice" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="MQV-Nb-TW5"/>
+                        <viewControllerLayoutGuide type="bottom" id="agv-rD-5k2"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="goh-Oa-ozM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2h-D7-dJR">
-                                <rect key="frame" x="0.0" y="234" width="600" height="57"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Roll">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu3-VI-45I">
+                                <rect key="frame" x="235" y="389" width="131" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBe-Oq-kqu">
+                                <rect key="frame" x="244" y="351" width="113" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oVu-Vy-ZdW"/>
+                                    <constraint firstAttribute="width" constant="113" id="srx-gx-nF9"/>
+                                </constraints>
+                                <state key="normal" title="Roll D6">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="rollButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="KmV-Wt-oSp"/>
+                                    <action selector="rollD6:" destination="Dkn-yZ-vJB" eventType="touchUpInside" id="XKT-6L-Pfk"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="i2h-D7-dJR" secondAttribute="centerX" id="OVA-F3-xX0"/>
-                            <constraint firstItem="i2h-D7-dJR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="f6R-e6-Bd2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="i2h-D7-dJR" secondAttribute="trailing" constant="-16" id="xfT-yw-xb9"/>
+                            <constraint firstAttribute="centerX" secondItem="XBe-Oq-kqu" secondAttribute="centerX" id="PiD-bM-hlo"/>
+                            <constraint firstAttribute="centerX" secondItem="Zu3-VI-45I" secondAttribute="centerX" id="eDw-aV-Sy8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6oF-Bj-IcX"/>
+                    <navigationItem key="navigationItem" id="0cl-M6-mp7"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="Zu3-VI-45I" id="Y2W-Ux-Lfx"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7WY-pl-eWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920" y="-327"/>
+            <point key="canvasLocation" x="2661" y="-327"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="lmc-F7-Gx9">
+        <scene sceneID="iAK-r3-Ipc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PMy-1i-MFI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7x0-Tx-w7Z" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tZX-gJ-LHl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Jo-rX-opq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BLj-5d-sSI"/>
+                        <segue destination="Dkn-yZ-vJB" kind="relationship" relationship="rootViewController" id="7lf-KP-o4O"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jkb-84-3rG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yt9-kQ-2Bo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147" y="-327"/>
+            <point key="canvasLocation" x="1849" y="-327"/>
         </scene>
     </scenes>
 </document>

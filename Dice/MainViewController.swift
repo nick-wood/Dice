@@ -10,13 +10,12 @@ import UIKit
 
 class MainViewController: UIViewController {
   
-  // These variables will be set by a two column picker on the main screen. They represent the number of dice the user is rolling  (numberOfDice) and the number of sides on each of those dice (dieSides). Rolls of mixed die type not supported in v1 of the app. Default value is 4d20, because best dice.
+  let numberOfDice = 1
+  let dieSides = UInt32(6)
+  var individualScores = [Int]()
+  var totalRoll: Int = 0
   
-  var numberOfDice: Int = 4
-  var dieSides: Int = 20
-  var rollResults: [Roll] = []
-  
-  // This array holds the results of each roll. Entries are an object subclassed from the Roll class. Their specific properties can be accessed, including number of dice, die sides, and scores of individual die rolls within the Roll.
+  @IBOutlet weak var answerLabel: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,8 +26,24 @@ class MainViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  @IBAction func rollButtonPressed() {
-    println("You pressed the roll button. Rad.")
+  func rollDice(numberOfDice: Int, dieSides: UInt32) {
+    var count = 1
+    
+    if (totalRoll > 0) {
+    totalRoll = 0
+    }
+    
+    do {
+      var result = Int(arc4random_uniform(dieSides) + 1)
+      
+      individualScores.append(result)
+      totalRoll += result
+      count++
+    } while (count <= numberOfDice);
+  }
+  
+  @IBAction func rollD6(sender: AnyObject) {
+    rollDice(numberOfDice, dieSides: dieSides)
+    answerLabel.text = "Total is \(totalRoll)"
   }
 }
-
